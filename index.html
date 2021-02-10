@@ -9,52 +9,55 @@
 </head>
 <body>
     <header id="survey__head">
-        <h1 id="title" class="container">Survey</h1>
-        <p id="description" class="container">
+        <h1 id="title">Survey</h1>
+        <p id="description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ipsum. Facere amet voluptate harum fugit, rem quae consequatur iste quia vitae voluptas, repellat non inventore?
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos rem illum non harum eum neque, tempore quam alias atque modi laudantium quidem repudiandae. Et modi, fugit voluptatibus molestiae quidem cupiditate doloremque perferendis eum sunt adipisci aspernatur. Officiis repudiandae nemo incidunt eius iusto autem, sed blanditiis nihil id perspiciatis maiores expedita.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. repudiandae. Et modi, fugit voluptatibus molestiae quidem cupiditate doloremque perferendis eum sunt adipisci aspernatur. Officiis repudiandae nemo incidunt eius iusto autem, sed blanditiis nihil id perspiciatis maiores expedita.
         </p>
     </header>
     <form action="" id="survey-form" class="container container__form">
         <div class="survey__personal survey--div">
-            <label for="nickname" id="name-label">Nickname: </label>
-            <input type="text" name="nickname" id="name" placeholder="Nickname" required>
+            <label for="nickname" id="name-label" class="input--label">Nickname: </label><br>
+            <input type="text" name="nickname" id="name" class="survey__personal--input survey__personal--input--text" placeholder="Nickname" required>
                 <br>
-            <label for="email" id="email-label">Email: </label>
-            <input type="email" name="email" id="email" placeholder="@abc.com" required>
+
+            <label for="email" id="email-label" class="input--label">Email: </label><br>
+            <input type="email" name="email" id="email" class="survey__personal--input survey__personal--input--text" placeholder="@abc.com" required>
                 <br>
-            <label id="number-label">Age<i>*must be 18 or above to take the survey</i>
-                <input type="number" id="number" min="18" max="200" placeholder="Age" required>
+
+            <label id="number-label" class="input--label">Age<i> *must be 18 or above to take the survey</i><br>
+                <input type="number" id="number" class="survey__personal--input" min="18" max="200" placeholder="Age" required>
             </label>
                 <br>
-            <label for="pNum" id="pNum-label">Phone number </label>
-            <input type="text" name="pNum" id="pNum" placeholder="+639.." required>
+
+            <label for="pNum" id="pNum-label" class="input--label">Phone number <i> *not required</i></label><br>
+            <input type="text" name="pNum" id="pNum" class="survey__personal--input" placeholder="+639..">
             <br>
 
-            <label>Please select your gender:</label><br>
+            <label for="gender" id="gender-label" class="input--label">Please select your gender:</label><br>
             <input type="radio" id="male" name="gender" value="male">
             <label for="male">Male</label><br>
             <input type="radio" id="female" name="gender" value="female">
             <label for="female">Female</label><br>
             <input type="radio" id="gen-other" name="gender" value="other">
-            <label for="other">Other</label>
+            <label for="other">Other</label><br>
 
-            <label>In which region are you in?</label>
-            <select name="cars" id="dropdown">
-                <option value="Region 1">Region 1</option>
-                <option value="Region 2">Region 2</option>
-                <option value="Region 3">Region 3</option>
-                <option value="Region 4">Region 4</option>
-                <option value="Region 5">Region 5</option>
-                <option value="Region 6">Region 6</option>
-                <option value="Region 7">Region 7</option>
+            <label for="region" class="region--label input--label">From what region are you?</label><br>
+            <select name="region" id="dropdown" class="survey__personal--input" >
+                <option value="Region 1" class="survey__personal--input">Region 1</option>
+                <option value="Region 2" class="survey__personal--input">Region 2</option>
+                <option value="Region 3" class="survey__personal--input">Region 3</option>
+                <option value="Region 4" class="survey__personal--input">Region 4</option>
+                <option value="Region 5" class="survey__personal--input">Region 5</option>
+                <option value="Region 6" class="survey__personal--input">Region 6</option>
+                <option value="Region 7" class="survey__personal--input">Region 7</option>
             </select>
 
             <br>
         </div>
         
-        <div class="container">
-            <label>What is your monthly income:</label><br>
+        <div class="survey__stream">
+            <label class="input--label">What is your monthly income:</label><br>
                 <input type="radio" id="income00" name="income" value="income00">
                 <label for="income00">under Php15,000</label><br>
                 <input type="radio" id="income01" name="income" value="income01">
@@ -65,8 +68,8 @@
                 <label for="income03">More than Php40,000</label>
         </div>
 
-        <div class="container">
-            <label>What streaming service do you pay for?  (Check all that apply.)</label>
+        <div class="survey__stream">
+            <label class="input--label">What streaming service do you pay for?  (Check all that apply.)</label><br>
                 <input type="checkbox" name="svc_stream" id="svc_netflix" value="svc_netflix">
                 <label for="svc_netflix">Netflix</label><br>
                 <input type="checkbox" name="svc_stream" id="svc_hulu" value="svc_hulu">
@@ -81,12 +84,12 @@
                 <label for="svc_hbomax">Hbo Max</label><br>
                 <input type="checkbox" name="svc_stream" id="svc_other" value="svc_other">
                 <label for="svc_other">Other</label>
-                <input type="text" class="form-control" name="" placeholder=" PLease specify">
+                <input type="text" class="other--text" name="" placeholder=" PLease specify">
         </div>
 
-        <div class="container">
-            <label>How often do you use your service?</label>
-                <input type="radio" name="svc_use" id="use_everyday" value="use_1">
+        <div class="survey__stream">
+            <label class="input--label">How often do you use your service?</label><br>
+                <input type="radio" name="svc_use" id="use_everyday" value="use_1"><br>
                 <label for="use_everyday">Everyday</label><br>
                 <input type="radio" name="svc_use" id="use_oneweek" value="use_2">
                 <label for="use_oneweek">At least once a week</label><br>
@@ -94,16 +97,16 @@
                 <label for="use_mulweek">Multiple times a week</label><br>
         </div>
         
-        <div class="container">
-            <label>Do you share your service with others?</label>
+        <div class="survey__stream">
+            <label class="input--label">Do you share your service with others?</label><br>
                 <input type="radio" name="svc_share" id="share_yes" value="share_yes">
                 <label for="share_yes">Yes</label><br>
                 <input type="radio" name="svc_share" id="share_no" value="share_no">
                 <label for="share_no">I don't</label><br>
         </div>
 
-        <div class="container">
-            <label>On what device are you streaming on?  (Check all that apply.)</label>
+        <div class="survey__stream">
+            <label class="input--label">On what device are you streaming on?  (Check all that apply.)</label><br>
                 <input type="checkbox" name="dvc_stream" id="dvc_smartphone" value="dvc_smartphone">
                 <label for="dvc_smartphone">Smartphone</label><br>
                 <input type="checkbox" name="dvc_stream" id="dvc_tablet" value="dvc_tablet">
@@ -114,11 +117,11 @@
                 <label for="dvc_gconsole">Gaming console</label><br>
                 <input type="checkbox" name="dvc_stream" id="dvc_other" value="dvc_stream">
                 <label for="dvc_other">Other</label>
-                <input type="text" class="form-control" name="" id="" placeholder=" Please specify">
+                <input type="text" class="other--text" name="" id="" placeholder=" Please specify">
         </div>
 
-        <div class="container">
-            <label>How satisfied are you with your current service? (1 is the lowest and 5 is the highest)</label>
+        <div class="survey__stream">
+            <label class="input--label">How satisfied are you with your current service? (1 is the most disatisfied and 5 is the most satisfied)</label><br>
                 <input type="radio" name="svc_satisfy" id="svc_satis-1" value="svc_satis-1">
                 <label for="svc_satis-1"> 1</label><br>
                 <input type="radio" name="svc_satisfy" id="svc_satis-2" value="svc_satis-2">
@@ -132,11 +135,11 @@
         </div>
 
         
-        <div class="container">
-            <label>Please tell us on how we can improve our survey.</label>
+        <div class="survey__stream">
+            <label class="input--label">Please tell us on how we can improve our survey.</label><br>
             <textarea class="comment-text" placeholder="comments and suggestions"></textarea>
                 <br>
-            <button type="submit" id="submit">Submit</button>
+            <button type="submit" id="submit" class="btn">Submit</button>
         </div>
     </form>    
 </body>
